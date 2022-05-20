@@ -23,7 +23,7 @@ async function run() {
       ref: "tags/" + tagName,
     });
   } catch (e) {
-    console.log("The nightly tag doesn't exist yet: " + e);
+    console.log("Couldn't delete ${ref}. " + e);
   }
   await github.git.createRef({
     owner: context.repo.owner,
