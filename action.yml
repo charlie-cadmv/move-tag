@@ -1,6 +1,6 @@
-name: 'move-tags'
-description: 'Moving tag'
-author: 'snsina'
+name: "move-tags"
+description: "Moving tag"
+author: "snsina"
 inputs:
   tag_name:
     required: true
@@ -10,10 +10,10 @@ inputs:
     required: true
 outputs:
   text:
-    description: 'A boolean value to indicate an exact match was found for the primary key'
+    description: "A boolean value to indicate an exact match was found for the primary key"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.tag_name }}
     - ${{ inputs.commit_sha }}
